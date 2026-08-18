@@ -18,7 +18,7 @@ source .venv/bin/activate
 
 # MODEL_CHECKPOINT is optional: defaults to checkpoints/idv2v.pth (fetched by scripts/download_checkpoints.sh);
 # set MODEL_CHECKPOINT=/local/idv2v.pth to use your own.
-export GPU="${GPU:-0,1,2,3,4,5,6,7}"                                          # CUDA ids; >1 -> multi-GPU (USP)
+export GPU="${GPU:-0}"                                                        # CUDA ids; >1 -> multi-GPU (USP)
 export GPU_ID="${GPU_ID:-${GPU%%,*}}"                                         # SAM3 preprocess uses ONE GPU (first of $GPU)
 export SAMPLE_DIR="${SAMPLE_DIR:-test_samples/restylization/two_sitting_woman}"   # source.mp4 + stylized_first_frame.png + prompt.txt
 export MAX_NUM_FRAMES="${MAX_NUM_FRAMES:-81}"   # cap on total output frames. The engine is ALWAYS chunk-by-chunk;

@@ -15,7 +15,7 @@ source .venv/bin/activate
 
 # MODEL_CHECKPOINT is optional: defaults to checkpoints/idv2v.pth (fetched by scripts/download_checkpoints.sh);
 # set MODEL_CHECKPOINT=/local/idv2v.pth to use your own.
-export GPU="${GPU:-0,1,2,3,4,5,6,7}"
+export GPU="${GPU:-0}"
 export GPU_ID="${GPU_ID:-${GPU%%,*}}"                                         # SAM3 preprocess uses ONE GPU (first of $GPU)
 export SAMPLE_DIR="${SAMPLE_DIR:-test_samples/longer_video/woman_dancing}"    # full-length source (240 frames)
 export MAX_NUM_FRAMES="${MAX_NUM_FRAMES:-240}"   # full length -> multi-clip (240 -> 3 x 81-frame chunks).

@@ -13,7 +13,7 @@ source .venv/bin/activate
 
 # MODEL_CHECKPOINT is optional: defaults to checkpoints/idv2v.pth (fetched by scripts/download_checkpoints.sh);
 # set MODEL_CHECKPOINT=/local/idv2v.pth to use your own.
-export GPU="${GPU:-0,1,2,3,4,5,6,7}"
+export GPU="${GPU:-0}"
 export SAMPLE_DIR="${SAMPLE_DIR:-test_samples/relighting/two_sitting_woman}"  # source.mp4 + stylized_first_frame.png + prompt.txt (NO preprocessing)
 export MAX_NUM_FRAMES="${MAX_NUM_FRAMES:-81}"   # first clip only (81 frames).
 

@@ -20,7 +20,7 @@ SAMPLE_DIR="${SAMPLE_DIR:-test_samples/restylization/two_sitting_woman}"   # inp
 # fetches from Hugging Face; set MODEL_CHECKPOINT to use a local copy.
 MODEL_CHECKPOINT="${MODEL_CHECKPOINT:-checkpoints/idv2v.pth}"     # from scripts/download_checkpoints.sh; override with a local path
 WAN_MODEL_DIR="${WAN_MODEL_DIR:-checkpoints/wan}"                 # default: from scripts/download_checkpoints.sh. Override if Wan weights live elsewhere.
-GPU="${GPU:-0,1,2,3,4,5,6,7}"                                     # comma-separated CUDA ids; >1 GPU auto-enables torchrun + USP sequence parallel
+GPU="${GPU:-0}"                                                   # comma-separated CUDA ids; >1 GPU auto-enables torchrun + USP sequence parallel
 
 RUN_NAME=""   # empty -> auto-derived as r{W}x{H}_f{F}_kf{N}_idv2v
 
